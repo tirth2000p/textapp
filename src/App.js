@@ -15,7 +15,7 @@ function App() {
       setChat([...chat, newChat]);
 
       try {
-          const response = await axios.post('http://localhost:5000/chat', { message: userInput });
+          const response = await axios.post('https://decisive-light-410020.uk.r.appspot.com/chat', { message: userInput });
           setChat([...chat, newChat, { sender: 'Bot', message: response.data.response }]);
       } catch (error) {
           console.error('Error sending message to Flask:', error);
